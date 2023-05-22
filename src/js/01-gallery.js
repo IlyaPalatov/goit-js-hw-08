@@ -35,20 +35,4 @@ function createGalleryItems(galleryItems) {
 gallery.innerHTML = createGalleryItems(galleryItems);
 
 
-gallery.addEventListener('click', (e) => {
-  e.preventDefault();
-
-  if (e.target.nodeName !== 'IMG') return;
-
-  const imageSrc = e.target.dataset.source;
-  const imageAlt = e.target.alt;
-
-
-  const instance = basicLightbox.create(`
-    <div class="modal">
-      <img src="${imageSrc}" alt="${imageAlt}" class="modal__image">
-    </div>
-  `);
-
-  instance.show();
-});
+var lightbox = new SimpleLightbox('.gallery a', { galleryItems});
