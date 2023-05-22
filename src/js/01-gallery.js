@@ -35,4 +35,5 @@ function createGalleryItems(galleryItems) {
 gallery.innerHTML = createGalleryItems(galleryItems);
 
 
-var lightbox = new SimpleLightbox('.gallery a', { galleryItems});
+const lightbox = new SimpleLightbox('.gallery a', { captionsData: 'alt',
+captionDelay: 250,});
